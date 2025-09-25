@@ -1,27 +1,14 @@
-// para declarar uma variavel sem valor 
-
-var user 
-
+/* O java scriprt tem 3 jeitos de de declarar uma variavel
+sendo esses:
+- var que é um tipo de variavél que pode ser sobrescrita
+-let que é um tipo de varivel que eu não posso sobreescrever
+e constat 
+*/
+let user = "raphael"
 console.log (user)
 
-console.log ("hello world")
-
-// para declarar uma variavel com valor 
-
 var email = "raphaelsteimvacher2251@gmail.com"
+console.log(email)
 
-console.log (email)
-
-/*Para substituir um valor de uma variavel seguindo uma 
- logica de linha por linha */
-
- email ="criptolien2251@gmail.com"
- console.log (email)
-
-
- /* O JS é Case-sensitive, ou seja é sensivel a letras
-  maiusculas e minusculas */
-
-
-
-
+const number = "2251"
+console.log(number)

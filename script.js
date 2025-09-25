@@ -1,13 +1,24 @@
-console.log("hello World")
-console.log("bora começar essa aula")
+// para declarar uma variavel sem valor 
 
-// escrever bara-barra vc comenta uma linha de codigo
+var user 
 
-/* 
-ja o barra-* é para fazer um comentário de multiplas linhas
-onde vc pode usar essa ferramenta de comentário para:
-- esconder do navegador partes do codigo
-- comentar breviamente como lembrete oq aquela parte 
-especifica do codigo faz
-- ou usar como um jeito de organizar sua linha de pensamento 
-*/
+console.log (user)
+
+console.log ("hello world")
+
+// para declarar uma variavel com valor 
+
+var email = "raphaelsteimvacher2251@gmail.com"
+
+console.log (email)
+
+/*Para substituir um valor de uma variavel seguindo uma 
+ logica de linha por linha */
+
+ email ="criptolien2251@gmail.com"
+ console.log (email)
+
+ 
+
+
+

@@ -18,7 +18,10 @@ console.log (email)
  email ="criptolien2251@gmail.com"
  console.log (email)
 
- 
+
+ /* O JS é Case-sensitive, ou seja é sensivel a letras
+  maiusculas e minusculas */
+
 
 
 

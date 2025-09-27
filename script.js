@@ -8,6 +8,8 @@
     segue os exemplos 
  */
 let user_name = ("Raphael")
+console.log (typeof user_name)
+
 
 console.log ("texto com aspas simples 'no meio do texto")
 //console.log (" Não é possivel fazer assim "pois o codigo se perder", tendeu ")
@@ -19,4 +21,4 @@ console.log('O contrário é "tambem" possivel')
     podemos usar o acento grave para isso.
     `)
 
-    
+

@@ -1,27 +1,22 @@
-// Aula sobre nomeação de variaveis
+// Aula sobre tipos de variaveis (string)
 /* 
-    A nomeação de variaveis pode ser feitas de varias formas 
-como o JS é Case sensitive é possivel fazer variaveis com 
-com o mesmo nome e se diferenciar com letras maisculas e
-minusculas, exemplos : user e User.
-    Mas pra uma padronização global os mais utilizados São 
-    as formas :
-    camelCase
-    snake_case
-    PascalCase
-
-    Não é recomedado utilizar caracteres especiais como ç
-    para nomeação de variaveis e tambem não utilizar acentos
-
+    O tipo de variavel string pode ser mostrado 
+    com aspas duplas ("")
+    com aspas simples famoso apóstofo ('')
+    e com o acento grave (``) que permite escrever 
+    com tabulação
+    segue os exemplos 
  */
+let user_name = ("Raphael")
 
-let productName = ("Teclado")
-let product_name = ("Mouse")
-let ProductName = ("PC")
+console.log ("texto com aspas simples 'no meio do texto")
+//console.log (" Não é possivel fazer assim "pois o codigo se perder", tendeu ")
 
-console.log (productName)
-console.log (product_name)
-console.log (ProductName)
+console.log('O contrário é "tambem" possivel')
+//console.log ('assim como o mesmo 'não é' possivel')
+ console.log(`
+    E por fim se necessário um texto com tabulação
+    podemos usar o acento grave para isso.
+    `)
 
-
-
+    

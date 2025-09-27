@@ -1,27 +1,30 @@
-// Aula sobre template literals
+// Aula sobre variaveis tipo number
 /* 
-    no JS é possivel concatenar texto e/ou usar comando no 
-    meio do texto.
  */
 
-    let user = "Raphael"
-    let email = "RaphaelSteimvacher2251@gmail.com"
-    let age = "24"
+//number e string
 
-    // colocar mais de um parametro deve usar , no texto
+console.log (5)
+console.log (typeof 5)
+console.log ('5')
+console.log (typeof "5")
 
-    console.log (user, email, age, "teste")
+//Numero positivo 
 
-    //concatenar texto tambem é possivel 
+console.log (5)
 
-    let message = "olá, " + user + ". Vc conectou ao servidor com o email " + email
+//Inteiro negativo
 
-    console.log (message)
+console.log (-5)
 
-    // ou podemos usar o comando ${} para utilizar dentro do console.log ficando mais organizado.
+//inteiro real ou float
 
-    console.log (`
-        Olá, ${user}.
-        vc conectou ao servidor com o email ${email}
-        `)
+console.log (225.1)
+console.log (125,1) //padrão na progamação utilizar ponto e não virgula
+
+//Nan = Not a number 
+
+console.log (5 / "raphael")
+
+
 

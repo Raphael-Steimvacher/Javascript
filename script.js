@@ -1,28 +1,27 @@
-// Aula sobre scope e hosting
-/* var é mais usado para declaração de variaveis globais
-enquanto o let e const são mais utilizados para declaração
-de variaveis em blocos.
-A separação de global e blocos é feita com {    }, onde 
-fora das chaves é o scope global e dentro da chaves é o scope
-do bloco.   */
+// Aula sobre nomeação de variaveis
+/* 
+    A nomeação de variaveis pode ser feitas de varias formas 
+como o JS é Case sensitive é possivel fazer variaveis com 
+com o mesmo nome e se diferenciar com letras maisculas e
+minusculas, exemplos : user e User.
+    Mas pra uma padronização global os mais utilizados São 
+    as formas :
+    camelCase
+    snake_case
+    PascalCase
 
-var user = "raphael"
-let email = "criptoalien2251@gmail.com"
+    Não é recomedado utilizar caracteres especiais como ç
+    para nomeação de variaveis e tambem não utilizar acentos
 
-console.log (email)
-{
-    let email = "raphaelSteimvacher2251@gmail.com"
-    let age = "24"
-    let adreess = "av. sueo haguihara"
-    const number = "50"
-    console.log (user)
-    console.log (email)
-    console.log (age)
-    console.log (adreess)
-    console.log (number)
-}
+ */
 
-console.log (email)
+let productName = ("Teclado")
+let product_name = ("Mouse")
+let ProductName = ("PC")
+
+console.log (productName)
+console.log (product_name)
+console.log (ProductName)
 
 
 

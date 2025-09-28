@@ -1,153 +1,116 @@
-// Condicionais e Controle de fluxo
+// Funções
 
-//operador condicional ternário 
-console.log("Operador condicional Ternário")
-
-let age = 16
-
-console.log(
-    age >= 18 // 1- condição
-    ? "Você pode dirigir." // 2 - Se verdadeiro
-    : "Você não pode dirigir." // 3 - Se falso
-)
-
-console.log(
-    age < 18 // 1- condição
-    ? "Você não pode dirigir." // 2 - Se verdadeiro
-    : "Você pode dirigir." // 3 - Se falso
-)
-
-// Falsy e Truthy
+//A primeira função
+// Argumentos é parametros
 /*
-Falsy é quando um valor é considerado false e Thuthy 
-é quando é considerado veradeiro em contexto onde um 
-boolean é obrigatório (condicionais e loops)
+-Parâmetros é a variavel (escopo da função) que irá receber um valor em uma função.
+- Argumentos é o valor que é passado para a função.
 */
-console.log("Falsy e Truthy")
+//passado o parâmetro username
+function welcome(username){
+    console.log("Seja bem Vindo!!!", username)
+}
+// passando argumentos 
+welcome("Raphael")
+welcome("Lara")
+welcome("Alice")
 
-console.log("### EXEMPLOS DE FALSY ###")
-console.log(false ? "VERDADEIRO" : "FALSO")
-console.log(0 ? "VERDADEIRO" : "FALSO")
-console.log(-0 ? "VERDADEIRO" : "FALSO")
-console.log("" ? "VERDADEIRO" : "FALSO")
-console.log(null ? "VERDADEIRO" : "FALSO")
-console.log(undefined ? "VERDADEIRO" : "FALSO")
-console.log(NaN ? "VERDADEIRO" : "FALSO")
-
-console.log("### EXEMPLOS DE THUTHY ###")
-console.log(true ? "VERDADEIRO" : "FALSO")
-console.log({} ? "VERDADEIRO" : "FALSO")
-console.log([] ? "VERDADEIRO" : "FALSO")
-console.log(1 ? "VERDADEIRO" : "FALSO")
-console.log(22.5 ? "VERDADEIRO" : "FALSO")
-console.log("0" ? "VERDADEIRO" : "FALSO")
-console.log("Raphael" ? "VERDADEIRO" : "FALSO")
-console.log("false" ? "VERDADEIRO" : "FALSO")
-console.log(-1 ? "VERDADEIRO" : "FALSO")
-console.log(Infinity ? "VERDADEIRO" : "FALSO")
-console.log(-Infinity ? "VERDADEIRO" : "FALSO")
-
-// Condição IF (SE)
-console.log("### CONDIÇÃO IF (SE)")
-
-let hour = 20
-
-if(hour <=12){
-    console.log("Bom Dia")
-    console.log("Seja Bem-Vindo")
+function sum(a, b){
+    console.log(a + b)
 }
 
-//Condição IF (SE) ELSE (SE NÃO)
-console.log("### CONDIÇÃO IF (SE) ELSE (SE NÃO)")
-
-if (age >= 18){
-    console.log("Você pode Dirigir.")
-}else{
-    console.log("Voce não pode dirigir")
+sum(2, 4)
+sum(10, 5)
+//Definindo um valor padrão para o argumento
+function jointext(text1, text2 ="", text3 = "", text4 = ""){
+    console.log(text1, text2, text3, text4)
 }
 
-//Condição IF ELSE IF
-console.log("### CONDIÇÃO IF ELSE IF ###")
+jointext("Raphael", "Piccoli", "Lima", "Steimvacher")
+//por conta do aspas vazia, não apareceu o undefined no console.
+jointext("Raphael", "Piccoli")
 
-//Estrutura 1
-if (hour <= 12){
-    console.log("Bom Dia")
+//retornando valores de uma função
+
+function sub(a,b){
+    let result = a - b
+    return result
 }
-else if(hour > 18){
-    console.log("Boa Noite")
-}
-else if(hour > 12){
-    console.log("Boa Tarde")
-}
+let response = sub(4,2)
+console.log(response)
+console.log(sub(10,5))
 
-//Estrutura 2
-
-if (hour <= 12){
-    console.log("Bom Dia")
-}else if(hour >12 && hour <=18){
-        console.log("Boa Tarde")
-    }else{
-            console.log("Boa Noite")
-        }
-
-//ESTRUTURA SWITCH CASE
-console.log("### ESTRUTURA SWITCH CASE ###")
-
-let option = 2
-
-switch(option){
-    case 1:
-        console.log("Consultar pedido")
-        console.log("aguardar...")
-        break
-    case 2:
-        console.log("Falar com atendente")
-        break
-    case 3:
-        console.log("cancelar pedido")
-        break
-    default:
-        console.log("Opção Inválida, tente novamente!")
-}
-
-// ESTRUTURA DE TRY CATCH
-/* é uma estrutura que é utilizada para evitar
-que a aplicação trave e feche, utilizada em situações
-em que a aplicação não depende so do seu codigo, 
-mas precisa de algo externo como por exemplo:
-quando preciso acessar algo que esta fora do meu codigo
-ou o usuário pode colocar um informação que não é valida.
-E assim por diante.
+//comentários de documentação
+/* 
+Comentário de documentação em JS (sintaxe de JSDoc).
+O JSDoc é um padrão para incoporar documentação no codigo fonte 
+a partir desses comentários,
 */
-console.log("### ESTRUTURA DE TRY CATCH ###")
 
-try {
-    //TENTA executar algo
-    console.log(result)
-} catch (error) {
-    /*se não conseguir executar vc entra
-no catch e captura o erro para tratar */
-    //console.log(error)    
-    console.log("Não foi possivel executar seu pedido. Tente novamente mais tarde")
-} finally {
-    /* o finally é opcional, onde ele idependente
-    de executar oq está no bloco try ou no cacth
-    ele vai executar depois oq esta aqui nesse bloco.
-    */
-    console.log("Fim")
+/**
+ *Authenticates the user
+ *
+ * @param {string} email user email.
+ * @param {string} password more than 6 caracteres.
+ * @returns {number} user id.
+ */
+function signIn(email, password){
+    //fluxo de autenticação do usuário
+    let id = 2251
+    return id
 }
 
-let x = 0
+console.log(signIn("raphaelsteimvacher2251@gmail.com", "123456789"))
 
-try {
-    if (x === 0) {
-        throw new error("O valor é igual a zero.")
-    }
-} catch (error) {
-    console.log(error)
-} finally {
-    console.log("Fim")
+//função anônima (função que não tem nome)
+
+const showMessage1 = function(){
+    return "Olá, Raphael"
 }
 
+console.log(showMessage1())
 
+const showMessage2 = function(message, name){
+    return message + name
+}
+
+console.log(showMessage2("Olá, ","Raphael"))
+
+//Arrow function (função de seta)
+
+const showMessage3 = () =>{
+    console.log("olá")
+}
+console.log(showMessage3)
+showMessage3()
+
+const showmessage4 = (username, email) =>{
+    console.log(`Olá, ${username}. Seu email é: ${email}.`)
+}
+console.log(showmessage4("Raphael2251", "Raphaelsteimvacher2251@gmail.com"))
+console.log(showmessage4("Raphael2251", "Raphaelsteimvacher2251@gmail.com"))
+
+//callback Function: é uma função passada para outra função com um argumento.
+
+function execute(taskName, callback){
+    console.log("Executando a tarefa: ", taskName)
+    callback()
+}
+
+function callback(){
+    console.log("Tarefa finalizada")
+}
+
+//Passando para a função.
+execute("Download do arquivo...", callback)
+
+//Criando a função no proprio parâmetro (função anonima)
+execute("upload do arquivo...", function(){
+    console.log("função de calback com uma função anonima.")
+})
+
+// Utilizando uma arrow function
+execute("Excluindo arquivo...", () =>{
+    console.log("Arquivo excluido!")
+})
 

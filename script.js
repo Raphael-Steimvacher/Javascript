@@ -1,161 +1,153 @@
-// Expressões e Operadores
+// Condicionais e Controle de fluxo
 
-//operadores aritméticos
-console.log("operadores aritimeticos")
+//operador condicional ternário 
+console.log("Operador condicional Ternário")
 
-console.log("soma: ", 10 + 5)
+let age = 16
 
-// cuidado com a concatenação de palavra
-console.log("concatenação: ", "10" + 5)
+console.log(
+    age >= 18 // 1- condição
+    ? "Você pode dirigir." // 2 - Se verdadeiro
+    : "Você não pode dirigir." // 3 - Se falso
+)
 
-console.log("subtração: ", 10 - 5)
+console.log(
+    age < 18 // 1- condição
+    ? "Você não pode dirigir." // 2 - Se verdadeiro
+    : "Você pode dirigir." // 3 - Se falso
+)
 
-console.log("multiplicação: ", 10 * 5)
+// Falsy e Truthy
+/*
+Falsy é quando um valor é considerado false e Thuthy 
+é quando é considerado veradeiro em contexto onde um 
+boolean é obrigatório (condicionais e loops)
+*/
+console.log("Falsy e Truthy")
 
-console.log("exponencial: ", 3 ** 2)
+console.log("### EXEMPLOS DE FALSY ###")
+console.log(false ? "VERDADEIRO" : "FALSO")
+console.log(0 ? "VERDADEIRO" : "FALSO")
+console.log(-0 ? "VERDADEIRO" : "FALSO")
+console.log("" ? "VERDADEIRO" : "FALSO")
+console.log(null ? "VERDADEIRO" : "FALSO")
+console.log(undefined ? "VERDADEIRO" : "FALSO")
+console.log(NaN ? "VERDADEIRO" : "FALSO")
 
-console.log("divisão: ", 10 / 5)
+console.log("### EXEMPLOS DE THUTHY ###")
+console.log(true ? "VERDADEIRO" : "FALSO")
+console.log({} ? "VERDADEIRO" : "FALSO")
+console.log([] ? "VERDADEIRO" : "FALSO")
+console.log(1 ? "VERDADEIRO" : "FALSO")
+console.log(22.5 ? "VERDADEIRO" : "FALSO")
+console.log("0" ? "VERDADEIRO" : "FALSO")
+console.log("Raphael" ? "VERDADEIRO" : "FALSO")
+console.log("false" ? "VERDADEIRO" : "FALSO")
+console.log(-1 ? "VERDADEIRO" : "FALSO")
+console.log(Infinity ? "VERDADEIRO" : "FALSO")
+console.log(-Infinity ? "VERDADEIRO" : "FALSO")
 
-//Muito usado pra ver se o numero é par ou impar
-console.log("Resto: ", 11 % 5)
+// Condição IF (SE)
+console.log("### CONDIÇÃO IF (SE)")
 
-//inclemento e declemento
-console.log("inclemento e declemento")
-let number = 10
+let hour = 20
 
-//inclemento (adicionar)
-number = number + 1
-console.log(number)
-number++
-console.log(number)
-number += 2
-console.log(number)
+if(hour <=12){
+    console.log("Bom Dia")
+    console.log("Seja Bem-Vindo")
+}
 
-//declemento (remover)
-number = number -1
-console.log(number)
-number--
-console.log(number)
-number -= 2
-console.log(number)
+//Condição IF (SE) ELSE (SE NÃO)
+console.log("### CONDIÇÃO IF (SE) ELSE (SE NÃO)")
 
-//Grouping operator
-console.log("grouping operator")
+if (age >= 18){
+    console.log("Você pode Dirigir.")
+}else{
+    console.log("Voce não pode dirigir")
+}
 
-let total1 =  2 + 3 * 4
-console.log(total1)
-let total2 = (2 +3) * 4
-console.log(total2)
-let average = (9 + 8 + 6.5)/3
-console.log(average)
+//Condição IF ELSE IF
+console.log("### CONDIÇÃO IF ELSE IF ###")
 
-//operadores de comparação e diferenciação 
-console.log("operadores de comparação e diferenciação")
+//Estrutura 1
+if (hour <= 12){
+    console.log("Bom Dia")
+}
+else if(hour > 18){
+    console.log("Boa Noite")
+}
+else if(hour > 12){
+    console.log("Boa Tarde")
+}
 
-let one = 1
-let two = 2
+//Estrutura 2
 
-// comparação (igual a) ==
-console.log("### igual a ###")
-console.log(one==two)
-console.log(one == 1)
-console.log(one == "1") //ele não diferencia tipo de variavel
+if (hour <= 12){
+    console.log("Bom Dia")
+}else if(hour >12 && hour <=18){
+        console.log("Boa Tarde")
+    }else{
+            console.log("Boa Noite")
+        }
 
-//diferenciação (Diferente de) !=
-console.log("### Diferente de ###")
-console.log(one != two)
-console.log(one != 1)
-console.log(one != "1")
+//ESTRUTURA SWITCH CASE
+console.log("### ESTRUTURA SWITCH CASE ###")
 
-//estritamente igual a e estitamente diferente de
-//ele não vai so olhar pra o conteudo mas sim pra o tipo tambem.
-console.log("estitamente igual a ou diferente de")
+let option = 2
 
-// estitamente igual a ===
-console.log("### estitamente igual a ###")
-console.log(one === two)
-console.log(one === 1)
-console.log(one === "1") //ele agora diferencia se é numero o string
+switch(option){
+    case 1:
+        console.log("Consultar pedido")
+        console.log("aguardar...")
+        break
+    case 2:
+        console.log("Falar com atendente")
+        break
+    case 3:
+        console.log("cancelar pedido")
+        break
+    default:
+        console.log("Opção Inválida, tente novamente!")
+}
 
-//estitamente diferente de !==
-console.log("### estitamente Diferente de ###")
-console.log(one !== two)
-console.log(one !== 1)
-console.log(one !== "1")
+// ESTRUTURA DE TRY CATCH
+/* é uma estrutura que é utilizada para evitar
+que a aplicação trave e feche, utilizada em situações
+em que a aplicação não depende so do seu codigo, 
+mas precisa de algo externo como por exemplo:
+quando preciso acessar algo que esta fora do meu codigo
+ou o usuário pode colocar um informação que não é valida.
+E assim por diante.
+*/
+console.log("### ESTRUTURA DE TRY CATCH ###")
 
-// operadores maior, menor ou igual
-console.log("Operadores maior, menor ou igual")
+try {
+    //TENTA executar algo
+    console.log(result)
+} catch (error) {
+    /*se não conseguir executar vc entra
+no catch e captura o erro para tratar */
+    //console.log(error)    
+    console.log("Não foi possivel executar seu pedido. Tente novamente mais tarde")
+} finally {
+    /* o finally é opcional, onde ele idependente
+    de executar oq está no bloco try ou no cacth
+    ele vai executar depois oq esta aqui nesse bloco.
+    */
+    console.log("Fim")
+}
 
-let balance = 500
-let payment = 120
+let x = 0
 
-// > maior que 
-console.log(balance > payment)
-
-// < menor que 
-console.log(balance < payment)
-
-balance = 120
-
-// >= maior ou igual 
-console.log(balance > payment)
-console.log(balance >= payment)
-console.log(balance <= payment)
-
-//operadores de atribuição
-console.log("operadores de atribuição")
-
-// operador de atribuição 
-value = 1
-console.log(value)
-
-//inclemento
-value += 2
-console.log(value)
-
-//declemento
-value -= 2
-console.log(value)
-
-//mulplicação 
-value *= 6
-console.log(value)
-
-//divisão
-value /= 2
-console.log(value)
-
-//Resto
-value %= 2
-console.log(value)
-
-//exponenciação
-value *= 3
-console.log(value)
-value **= 2
-console.log(value)
-
-//operadores logicos
-console.log("operadores logicos")
-
-let email = true
-let password = true
-
-
-//and (E) &&
-
-console.log(email && password)
-password = false
-console.log(email && password)
-
-//OR (ou) || 
-
-console.log(email || password)
-
-//NOT (negação) !
-
-console.log(!password)
-
+try {
+    if (x === 0) {
+        throw new error("O valor é igual a zero.")
+    }
+} catch (error) {
+    console.log(error)
+} finally {
+    console.log("Fim")
+}
 
 
 
